@@ -45,8 +45,10 @@ const register = async (req, res) => {
         })
     }
 
-    
-
 }
 
-module.exports = { register }
+const logout = (req, res) {
+    res.clearCookie()
+}
+
+module.exports = { register, logout }
